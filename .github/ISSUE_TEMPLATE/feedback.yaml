@@ -1,13 +1,13 @@
 name: "💬 Feedback / Report"
-about: "Submit a bug, request a feature, or provide general feedback for Being Infinity Codify"
-title: "[Feedback]"
+description: "Submit a bug, request a feature, or provide general feedback for Being Infinity Codify"
+title: "[Feedback] "
 labels: feedback
 body:
   - type: dropdown
-    id: type
+    id: feedback_type
     attributes:
-      label: "Select Feedback Type"
-      description: "Choose the type of feedback. 🐛 = Bug, ✨ = Feature, 💡 = Other"
+      label: "Type"
+      description: "Select the type of feedback"
       options:
         - "🐛 Bug"
         - "✨ Feature"
@@ -16,41 +16,26 @@ body:
       required: true
 
   - type: input
-    id: title
+    id: feedback_title
     attributes:
       label: "Short Title"
-      description: "A concise title for your feedback"
-      placeholder: "E.g., Login button not working"
+      description: "Provide a concise title for your feedback"
+      placeholder: "Example: Login button not working"
     validations:
       required: true
 
   - type: textarea
-    id: description
+    id: feedback_description
     attributes:
       label: "Description"
-      description: "Provide a detailed description of the issue or suggestion"
-      placeholder: |
-        Steps to reproduce (if bug):
-        1.
-        2.
-        3.
-
-        Expected behavior:
-
-        Actual behavior:
-
-        Additional context:
+      description: "Describe the feedback in detail"
+      placeholder: "Steps to reproduce, expected behavior, etc."
     validations:
       required: true
 
   - type: input
-    id: email
+    id: contact_email
     attributes:
       label: "Contact Email"
-      description: "Optional: We'll reach out if we need more details or to update you on progress"
+      description: "We may reach out for clarification"
       placeholder: "you@example.com"
-
-  - type: note
-    attributes:
-      text: |
-        Thank you for your feedback! Our team at **Being Infinity Codify** will review your submission and may contact you via the email provided. 🚀
